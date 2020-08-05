@@ -1,7 +1,7 @@
 {
   "name": "parcel-project-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "На компьютере должен быть установлен [Node.js](https://nodejs.org/en/).",
   "main": "index.js",
   "homepage": "https://project1-max.github.io/barbershop/",
   "scripts": {
@@ -25,5 +25,6 @@
     "parcel-bundler": "^1.12.4",
     "posthtml-include": "^1.4.3",
     "sass": "^1.26.9"
-  }
+  },
+  "dependencies": {}
 }
