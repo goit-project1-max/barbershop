@@ -462,10 +462,6 @@ a {
   }
 }
 
-.section.masters {
-  background-color: #f7f7f7;
-}
-
 @media screen and (min-width: 768px) {
   .container--masters {
     padding-left: 159px;
@@ -473,6 +469,9 @@ a {
   }
 }
 
+.masters {
+  background-color: #f7f7f7;
+}
 .masters__list {
   display: block;
 }
@@ -482,27 +481,27 @@ a {
     flex-wrap: wrap;
   }
 }
-.masters__list .masters__item {
+.masters__item {
   display: block;
 }
 @media screen and (min-width: 481px) and (max-width: 1279px) {
-  .masters__list .masters__item {
+  .masters__item {
     max-width: 450px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .masters__list .masters__item {
+  .masters__item {
     flex-basis: calc((100% - 60px) / 3);
     max-width: 370px;
   }
 }
 @media screen and (max-width: 1279px) {
-  .masters__list .masters__item:not(:last-child) {
+  .masters__item:not(:last-child) {
     margin-bottom: 64px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .masters__list .masters__item:not(:last-child) {
+  .masters__item:not(:last-child) {
     margin-right: 30px;
   }
 }
@@ -510,7 +509,6 @@ a {
 .card {
   text-align: center;
 }
-
 .card__title {
   margin-top: 30px;
   margin-bottom: 8px;
@@ -519,29 +517,23 @@ a {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.39;
-  letter-spacing: 0.02em;
 }
-
 .card__role {
-  margin-top: 0px;
   margin-bottom: 30px;
   color: #ff6c00;
   font-family: "Open Sans", sans-serif;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.36px;
-  letter-spacing: 0.02em;
 }
 
 .links {
   display: flex;
   justify-content: center;
-  padding: 0px 32px 24px;
+  padding: 0px 32px;
 }
-.links > .links__item:not(:last-child) {
+.links__item:not(:last-child) {
   margin-right: 10px;
 }
-
 .links__ellipse {
   display: inline-flex;
   width: 44px;
@@ -550,7 +542,6 @@ a {
   cursor: pointer;
   background-color: #ffffff;
 }
-
 .links__icon {
   margin: auto;
   width: 20px;
