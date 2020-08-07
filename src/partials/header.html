@@ -1,0 +1,54 @@
+ <header class="header__main">
+     <div class="header__nav ">
+         <div class="header__mob">
+             <a href="./index.html" lang="en"> <svg class="icon-logo" width="70" height="56"
+                     aria-label="Логотип Барбершоп">
+                     <use href="./images/sprite.svg#icon-logo"></use>
+                 </svg></a>
+             <button type="button" class="menu__button" aria-expanded="false" aria-controls="menu__container"
+                 data-menu-button>
+                 <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                     <use class="menu__icon-close" href="./images/sprite.svg#icon-close"></use>
+                     <use class="menu__icon" href="./images/sprite.svg#icon-menu"></use>
+                 </svg>
+             </button>
+         </div>
+         <div class="menu__container" id="menu__container" data-menu>
+             <nav class="main-nav">
+                 <ul class="site-nav">
+                     <li class="site-nav__item">
+                         <a href="#" class="site-nav__link" aria-label="О нас">О нас</a>
+                     </li>
+                     <li class="site-nav__item">
+                         <a href="#" class="site-nav__link" aria-label="Наши услуги и цены">Услуги и цены</a>
+                     </li>
+                     <li class="site-nav__item">
+                         <a href="#" class="site-nav__link" aria-label="Наши мастера">Мастера</a>
+                     </li>
+                     <li class="site-nav__item">
+                         <a href="#" class="site-nav__link" aria-label="Наши контакты">Контакты</a>
+                     </li>
+                 </ul>
+
+                 <div class="contact-header">
+                     <a class="button--color button__order--color" href="#feedback"
+                         aria-label="Оформить заказ услуги">онлайн-запись</a>
+                     <a class="contact-header__link" href="tel:+380441111111" aria-label="Наш номер телефона">+38 044
+                         1111111</a>
+
+                 </div>
+             </nav>
+             <ul class="social-nav">
+                 <li class="social-nav__item">
+                     <a href="#" class="social-nav__link" aria-label="Наша Instagram страница">Instagram</a>
+                 </li>
+                 <li class="social-nav__item">
+                     <a href="#" class="social-nav__link" aria-label="Наш Youtube канал">Youtube</a>
+                 </li>
+             </ul>
+         </div>
+     </div>
+ </header>
+
+ <!-- Бекдроп під мобільне меню -->
+ <div class="menu__backdrop is-open" data-backdrop></div>
