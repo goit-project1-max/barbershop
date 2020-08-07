@@ -184,16 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"swiper-bundle.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\price\\price-bg-mob.jpg":[["price-bg-mob.63fe748a.jpg","images/price/price-bg-mob.jpg"],"images/price/price-bg-mob.jpg"],"./..\\images\\price\\price-bg-mob@2x.jpg":[["price-bg-mob@2x.a3987b0a.jpg","images/price/price-bg-mob@2x.jpg"],"images/price/price-bg-mob@2x.jpg"],"./..\\images\\price\\price-bg-tab.jpg":[["price-bg-tab.9a9b59db.jpg","images/price/price-bg-tab.jpg"],"images/price/price-bg-tab.jpg"],"./..\\images\\price\\price-bg-tab@2x.jpg":[["price-bg-tab@2x.d8a9cb86.jpg","images/price/price-bg-tab@2x.jpg"],"images/price/price-bg-tab@2x.jpg"],"./..\\images\\price\\price-bg-desk.jpg":[["price-bg-desk.0854f6db.jpg","images/price/price-bg-desk.jpg"],"images/price/price-bg-desk.jpg"],"./..\\images\\price\\price-bg-desk@2x.jpg":[["price-bg-desk@2x.0df6cabf.jpg","images/price/price-bg-desk@2x.jpg"],"images/price/price-bg-desk@2x.jpg"],"./..\\images\\contacts\\png\\contact-mob.png":[["contact-mob.4f3bee4b.png","images/contacts/png/contact-mob.png"],"images/contacts/png/contact-mob.png"],"./..\\images\\contacts\\png\\contact-mob@2x.png":[["contact-mob@2x.19dbdefe.png","images/contacts/png/contact-mob@2x.png"],"images/contacts/png/contact-mob@2x.png"],"./..\\images\\contacts\\png\\contact-tab.png":[["contact-tab.380216d6.png","images/contacts/png/contact-tab.png"],"images/contacts/png/contact-tab.png"],"./..\\images\\contacts\\png\\contact-tab@2x.png":[["contact-tab@2x.4efc5bc4.png","images/contacts/png/contact-tab@2x.png"],"images/contacts/png/contact-tab@2x.png"],"./..\\images\\contacts\\png\\contact-desk.png":[["contact-desk.0bf9edfc.png","images/contacts/png/contact-desk.png"],"images/contacts/png/contact-desk.png"],"./..\\images\\contacts\\png\\contact-desk@2x.png":[["contact-desk@2x.4efc9e12.png","images/contacts/png/contact-desk@2x.png"],"images/contacts/png/contact-desk@2x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/index.js":[function(require,module,exports) {
-"use strict";
-
-require("../sass/main.scss");
-},{"../sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -221,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58847" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52728" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -397,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
-//# sourceMappingURL=/js.00a46daa.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/swiper-bundle.bd2d2058.js.map
