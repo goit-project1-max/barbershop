@@ -22,7 +22,7 @@
   text-decoration: none;
   color: $primary-white-color;
 
-  transition: background-color $timming;
+  transition: background-color $timming, color $timming;
 
   &:hover,
   &:focus {

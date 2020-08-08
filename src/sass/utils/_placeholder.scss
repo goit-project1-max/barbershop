@@ -1,9 +1,17 @@
-    %contact-link {
-        font-style: normal;
-        font-size: 18px;
-        line-height: 1.67;
-        letter-spacing: 0.02em;
+%contact-link {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
 
-        color: $secondary-text-color;
-        text-decoration: none;
-    }
+  color: $secondary-text-color;
+  text-decoration: none;
+}
+
+%link {
+  transition: color $timming;
+  &:focus,
+  &:hover {
+    color: $accent-color;
+  }
+}
