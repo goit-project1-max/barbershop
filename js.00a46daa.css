@@ -261,7 +261,7 @@ a {
   width: 160px;
   height: 680px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .side-bar {
     display: none;
   }
@@ -276,6 +276,7 @@ a {
 }
 .side-bar__social-nav-item--mb2 {
   margin-bottom: 70px;
+  text-transform: capitalize;
 }
 
 .side-bar__social-nav-link {
@@ -401,10 +402,12 @@ a {
 .button--mob {
   margin-bottom: 64px;
   width: 194px;
+  text-align: center;
 }
 
 .social-nav__link--mob {
   margin-bottom: 24px;
+  text-transform: capitalize;
 }
 
 .social-nav__link--mob {
@@ -415,6 +418,10 @@ a {
   line-height: 19px;
   text-align: end;
   letter-spacing: 0.2em;
+}
+
+.social-nav__link--mob:last-child {
+  margin-left: 80px;
 }
 
 .hero__text {
@@ -542,7 +549,7 @@ a {
 .icon-logo-mob {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .icon-logo-mob {
     position: absolute;
     top: 40px;
