@@ -296,14 +296,29 @@ a {
   background-size: cover;
   background-position: right;
 }
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx), screen and (min-resolution: 192dpi) {
+  .top {
+    background-image: url(/slider2-mob@2x.6b19dfdc.jpg);
+  }
+}
 @media screen and (min-width: 768px) {
   .top {
     background-image: url(/slider2-tab.1de8f94d.jpg);
   }
 }
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 2dppx), screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .top {
+    background-image: url(/slider2-tab@2x.9945f5b1.jpg);
+  }
+}
 @media screen and (min-width: 1280px) {
   .top {
     background-image: url(/slider2-desk.03ebed88.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 2dppx), screen and (min-width: 1280px) and (min-resolution: 192dpi) {
+  .top {
+    background-image: url(/slider2-desk@2x.2f3b3b8b.jpg);
   }
 }
 
