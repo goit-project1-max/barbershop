@@ -117,61 +117,25 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/slider.js":[function(require,module,exports) {
-var position = 0;
-var currentItem = 1;
-var slidesToShow = 1;
-var slidesToScroll = 1;
-var container = document.querySelector('.slider-container');
-var track = document.querySelector('.slider-track');
-var btnNext = document.querySelector('.btn-next');
-var btnPrev = document.querySelector('.btn-prev');
-var items = document.querySelectorAll('.slider-item');
-var itemsCount = items.length;
-var itemWidth = container.clientWidth / slidesToShow;
-var movePosition = slidesToScroll * itemWidth;
-items.forEach(function (item) {
-  item.style.minWidth = "".concat(itemWidth, "px");
-});
-btnNext.addEventListener('click', function () {
-  var itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
-  position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-  setPosition();
-  checkButtons();
-  currentItem = Math.abs(position) / itemWidth + 1;
-  setNavigator(currentItem);
-});
-btnPrev.addEventListener('click', function () {
-  var itemsLeft = Math.abs(position) / itemWidth;
-  position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-  setPosition();
-  checkButtons();
-  currentItem = Math.abs(position) / itemWidth + 1;
-  setNavigator(currentItem);
-});
-
-var setPosition = function setPosition() {
-  track.style.transform = "translateX(".concat(position, "px)");
-};
-
-var checkButtons = function checkButtons() {
-  btnPrev.disabled = position === 0;
-  btnNext.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
-};
-
-checkButtons();
-setNavigator(currentItem);
-
-function setNavigator(current) {
-  resetNavigator();
-  document.querySelector(".navigation-item:nth-child(".concat(current, ")")).classList.add('active-slide');
-}
-
-function resetNavigator() {
-  document.querySelectorAll('.navigation-item.active-slide').forEach(function (el) {
-    el.classList.remove('active-slide');
+})({"js/modal.js":[function(require,module,exports) {
+(function () {
+  var refs = {
+    openModalBtn: document.querySelectorAll('[data-modal-open]'),
+    closeModalBtn: document.querySelectorAll('[data-modal-close]'),
+    modal: document.querySelector('[data-modal]')
+  };
+  refs.openModalBtn.forEach(function (el) {
+    el.addEventListener('click', toggleModal);
   });
-}
+  refs.closeModalBtn.forEach(function (el) {
+    el.addEventListener('click', toggleModal);
+  });
+
+  function toggleModal() {
+    document.body.classList.toggle('modal-open');
+    refs.modal.classList.toggle('is-hidden');
+  }
+})();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -376,5 +340,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/slider.js"], null)
-//# sourceMappingURL=/slider.d16eec5e.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/modal.js"], null)
+//# sourceMappingURL=/modal.4331011c.js.map

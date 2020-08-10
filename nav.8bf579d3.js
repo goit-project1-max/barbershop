@@ -117,61 +117,38 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/slider.js":[function(require,module,exports) {
-var position = 0;
-var currentItem = 1;
-var slidesToShow = 1;
-var slidesToScroll = 1;
-var container = document.querySelector('.slider-container');
-var track = document.querySelector('.slider-track');
-var btnNext = document.querySelector('.btn-next');
-var btnPrev = document.querySelector('.btn-prev');
-var items = document.querySelectorAll('.slider-item');
-var itemsCount = items.length;
-var itemWidth = container.clientWidth / slidesToShow;
-var movePosition = slidesToScroll * itemWidth;
-items.forEach(function (item) {
-  item.style.minWidth = "".concat(itemWidth, "px");
-});
-btnNext.addEventListener('click', function () {
-  var itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
-  position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-  setPosition();
-  checkButtons();
-  currentItem = Math.abs(position) / itemWidth + 1;
-  setNavigator(currentItem);
-});
-btnPrev.addEventListener('click', function () {
-  var itemsLeft = Math.abs(position) / itemWidth;
-  position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-  setPosition();
-  checkButtons();
-  currentItem = Math.abs(position) / itemWidth + 1;
-  setNavigator(currentItem);
-});
+})({"js/nav.js":[function(require,module,exports) {
+(function () {
+  var refs = {
+    menuBtn: document.querySelector('[data-menu]'),
+    mobileMenu: document.querySelector('.nav-container')
+  }; // ---- Open and close Modal-Menu ------
 
-var setPosition = function setPosition() {
-  track.style.transform = "translateX(".concat(position, "px)");
-};
+  refs.menuBtn.addEventListener('click', toggleScroll);
+  refs.menuBtn.addEventListener('click', toggleMenu);
 
-var checkButtons = function checkButtons() {
-  btnPrev.disabled = position === 0;
-  btnNext.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
-};
+  function toggleScroll() {
+    if (document.body.style.overflow == 'hidden') {
+      document.body.style.overflow = '';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
+  }
 
-checkButtons();
-setNavigator(currentItem);
+  function toggleMenu() {
+    refs.menuBtn.classList.toggle('is-open');
+    refs.mobileMenu.classList.toggle('is-open');
 
-function setNavigator(current) {
-  resetNavigator();
-  document.querySelector(".navigation-item:nth-child(".concat(current, ")")).classList.add('active-slide');
-}
-
-function resetNavigator() {
-  document.querySelectorAll('.navigation-item.active-slide').forEach(function (el) {
-    el.classList.remove('active-slide');
-  });
-}
+    if (refs.mobileMenu.classList.contains('is-open')) {
+      refs.mobileMenu.addEventListener('click', toggleScroll, {
+        once: true
+      });
+      refs.mobileMenu.addEventListener('click', toggleMenu, {
+        once: true
+      });
+    }
+  }
+})();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -376,5 +353,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/slider.js"], null)
-//# sourceMappingURL=/slider.d16eec5e.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/nav.js"], null)
+//# sourceMappingURL=/nav.8bf579d3.js.map
