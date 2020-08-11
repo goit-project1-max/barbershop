@@ -175,3 +175,61 @@
   height: 100%;
   object-fit: cover;
 }
+
+// radio-line button slider
+.radio-line {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 50%;
+    right: 39px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    width: 40px;
+    transform: translateY(-50%);
+  }
+
+  &__btn {
+    width: 8px;
+    height: 2px;
+    margin-bottom: 13px;
+    fill: $secondary-text-color;
+
+    &.active {
+      fill: $primary-white-color;
+    }
+  }
+}
+
+.dots {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 39px;
+  }
+}
+
+.dots__item {
+  width: 8px;
+  height: 2px;
+  margin: 7px;
+  border: none;
+  background-color: $secondary-text-color;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.dots__item--active {
+  width: 18px;
+  background: $primary-white-color;
+  z-index: 3;
+}

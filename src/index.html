@@ -28,5 +28,22 @@
     <script src="./js/menu.js"></script>
     <script src="./js/siema.js"></script>
     <script src="./js/subscribe.js"></script>
+
+    <!-- <script type="text/javascript" charset="utf-8">
+      jQuery(document).ready(function () {
+        var change_every = 5; // The number of seconds that the slider will auto-advance in
+        var current = 1;
+        function auto_advance() {
+          if (current == -1) return false;
+          jQuery('#siema .slider-foto')
+            .eq(current % jQuery('#siema .slider-foto').length)
+            .trigger('click', [true]);
+          current++;
+        }
+        setInterval(function () {
+          auto_advance();
+        }, change_every * 1000);
+      });
+    </script> -->
   </body>
 </html>
