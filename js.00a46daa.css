@@ -656,6 +656,36 @@ a {
   object-fit: cover;
 }
 
+.dots {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .dots {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 39px;
+  }
+}
+
+.dots__item {
+  width: 8px;
+  height: 2px;
+  margin: 7px;
+  border: none;
+  background-color: #9da4bd;
+  outline: none;
+  cursor: pointer;
+}
+
+.dots__item--active {
+  width: 18px;
+  background: #ffffff;
+  z-index: 3;
+}
+
 @media screen and (max-width: 768px) {
   .about-us__pictures {
     display: none;
