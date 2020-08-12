@@ -176,32 +176,7 @@
   object-fit: cover;
 }
 
-// radio-line button slider
-.radio-line {
-  display: none;
-
-  @media screen and (min-width: $tablet) {
-    position: absolute;
-    top: 50%;
-    right: 39px;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-    width: 40px;
-    transform: translateY(-50%);
-  }
-
-  &__btn {
-    width: 8px;
-    height: 2px;
-    margin-bottom: 13px;
-    fill: $secondary-text-color;
-
-    &.active {
-      fill: $primary-white-color;
-    }
-  }
-}
+// active slide dots
 
 .dots {
   display: none;

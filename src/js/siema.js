@@ -18,74 +18,64 @@ const mySiema = new Siema({
 setInterval(() => mySiema.next(), 3000);
 document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
 document.querySelector('.next').addEventListener('click', () => mySiema.next());
+//
+//
 
-// extend a Siema class by two methods
-// addDots - to create a markup for dots
-// updateDots - to update classes on dots on change callback
-class SiemaWithDots extends Siema {
-  addDots() {
-    // create a contnier for all dots
-    // add a class 'dots' for styling reason
-    this.dots = document.createElement('div');
-    this.dots.classList.add('dots');
+//
+//
+//
+//
+// // extend a Siema class by two methods
+// // addDots - to create a markup for dots
+// // updateDots - to update classes on dots on change callback
+// class SiemaWithDots extends Siema {
+//   addDots() {
+//     // create a contnier for all dots
+//     // add a class 'dots' for styling reason
+//     this.dots = document.createElement('div');
+//     this.dots.classList.add('dots');
 
-    // loop through slides to create a number of dots
-    for (let i = 0; i < this.innerElements.length; i++) {
-      // create a dot
-      const dot = document.createElement('button');
+//     // loop through slides to create a number of dots
+//     for (let i = 0; i < this.innerElements.length; i++) {
+//       // create a dot
+//       const dot = document.createElement('button');
 
-      // add a class to dot
-      dot.classList.add('dots__item');
+//       // add a class to dot
+//       dot.classList.add('dots__item');
 
-      // add an event handler to each of them
-      dot.addEventListener('click', () => {
-        this.goTo(i);
-      });
+//       // add an event handler to each of them
+//       dot.addEventListener('click', () => {
+//         this.goTo(i);
+//       });
 
-      // append dot to a container for all of them
-      this.dots.appendChild(dot);
-    }
+//       // append dot to a container for all of them
+//       this.dots.appendChild(dot);
+//     }
 
-    // add the container full of dots after selector
-    this.selector.parentNode.insertBefore(this.dots, this.selector.nextSibling);
-  }
-
-  updateDots() {
-    // loop through all dots
-    for (let i = 0; i < this.dots.querySelectorAll('button').length; i++) {
-      // if current dot matches currentSlide prop, add a class to it, remove otherwise
-      const addOrRemove = this.currentSlide === i ? 'add' : 'remove';
-      this.dots.querySelectorAll('button')[i].classList[addOrRemove]('dots__item--active');
-    }
-  }
-}
-
-// instantiate new extended Siema
-const mySiemaWithDots = new SiemaWithDots({
-  // on init trigger method created above
-  onInit: function () {
-    this.addDots();
-    this.updateDots();
-  },
-
-  // on change trigger method created above
-  onChange: function () {
-    this.updateDots();
-  },
-});
-
-// Siema doesn't come with pagination built in
-// But it is very easy to add one if you want
-
-// // New siema instance
-// // Add a function that generates pagination to prototype
-// Siema.prototype.addPagination = function () {
-//   for (let i = 0; i < this.innerElements.length; i++) {
-//     const btn = document.createElement('button');
-//     btn.textContent = i;
-//     btn.addEventListener('click', () => this.goTo(i));
-//     this.selector.appendChild(btn);
+//     // add the container full of dots after selector
+//     this.selector.parentNode.insertBefore(this.dots, this.selector.nextSibling);
 //   }
-// };
-// // Trigger pagination creator
-// mySiema.addPagination();
+
+//   updateDots() {
+//     // loop through all dots
+//     for (let i = 0; i < this.dots.querySelectorAll('button').length; i++) {
+//       // if current dot matches currentSlide prop, add a class to it, remove otherwise
+//       const addOrRemove = this.currentSlide === i ? 'add' : 'remove';
+//       this.dots.querySelectorAll('button')[i].classList[addOrRemove]('dots__item--active');
+//     }
+//   }
+// }
+
+// // instantiate new extended Siema
+// const mySiemaWithDots = new SiemaWithDots({
+//   // on init trigger method created above
+//   onInit: function () {
+//     this.addDots();
+//     this.updateDots();
+//   },
+
+//   // on change trigger method created above
+//   onChange: function () {
+//     this.updateDots();
+//   },
+// });
